@@ -10,7 +10,7 @@ class date:
             self.day = kwargs['day']
             self.month = kwargs['month']
             self.year = kwargs['year']
-            self.date = '/'.join([self.day, self.month, self.year])
+            self.date = sep.join([self.day, self.month, self.year])
         else:
             raise ValueError("Insufficient Values")
 
@@ -71,4 +71,6 @@ class date:
             
 x = date('01/02/2022')
 y = date('01/02/2022')
+
 print(x<y)
+
