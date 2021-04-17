@@ -1,0 +1,43 @@
+.importexcel {  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+
+    span {
+        flex: 1;
+    }
+
+    form {
+        flex: 4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+
+        input[type=file] {
+            flex: 0;
+            display: none;
+        }
+
+        label {
+            border: 5px dashed;
+            border-radius: 5px;
+            width: 100%;
+            height: 150px;
+            span {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+    }
+
+}

@@ -1,6 +1,7 @@
 @background-color: #24283B;
 @font-color: #ffffff;
 @secondary-color: #505050;
+@hover-background: #24283B;
 
 * {
     padding: 0;
@@ -22,7 +23,7 @@
 html {
     background: @background-color;
     color: @font-color;
-    height: calc(100% - 40px);
+    height: calc(100% - 60px);
     width: calc(100% - 60px);
     margin-left: 60px;
     margin-top: 60px;
@@ -69,8 +70,9 @@ html {
             }
             
             &:hover {
-                background: #24283B;
+                background: @hover-background;
                 transition: 0.7s;
+                cursor: pointer;
 
                 i {
                     color: #97A7F9;
@@ -106,9 +108,33 @@ html {
 .container {
     .full();
     .center();
-
     .import {
         .full();
+        .center();
+        flex-direction: column;
+        .row{
+            .full();
+            .center();
+            width: 80%;
+            flex-direction: column;
+            justify-content: center;
+            .rowtitle{
+                width: 100%;
+                height: 2rem;
+            }
+            .impbut{
+                height: 20px;
+                width:100%;
+                // margin:10px ;
+                span{
+                    color:#97A7F9;
+                    a{
+                        text-decoration: underline;
+                        color: inherit;
+                    }
+                }
+            }
+        }
     }
 
     .help {
@@ -119,13 +145,21 @@ html {
             .center();
             flex-direction: column;
             .full();
-            padding: 50px 0;
+            // padding: 50px 0;
             .tip {
                 height: 80px;
                 width: 70%;
                 background-color: #1E2132;
                 border-radius: 5px;
             }
+
+            .rowtitle {
+                width: 70%;
+                padding: 0px 50px;
+                
+
+            }
+            
         }
         
     }

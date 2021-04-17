@@ -7,6 +7,7 @@
     <title>Inventory management</title>
     <!-- <link rel="stylesheet/less" type="text/css" href="/static/styles.less" /> -->
     <link rel="stylesheet/less" type="text/css" href="../static/styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="../static/import.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
     <script src="https://kit.fontawesome.com/9663701009.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,34 +31,17 @@
     </div>
 
     <div class="container">
-        <div class="import">
-            <div class="row">
-                <div class="rowtitle"><span>New</span></div>
-                <div class="impbut"><span><a href=''>Create an Inventory</a> </span> </div>
-                <div class="impbut"><span><a href=''>Import an excel sheet</a> </span> </div>
-                <div class="impbut"><span><a href=''></a></span></div>
-            </div>
-            <div class="row">
-                <div class="rowtitle"><span>Your inventories</span></div>
-                <div class="impbut"></div>
-                <div class="impbut"></div>
-                <div class="impbut"></div>
-            </div>
+        <div class="importexcel">
+           <span>Import your excel file</span>
+           <form action="POST" enctype="multipart/form-data">
+               <label for="excel"> <span>Choose File..</span> </label>
+               <input type="file" name="excel" id="excel" hidden><br>
+               <!-- <input type="text"><br> -->
+               <button>Submit</button>
+           </form>
         </div>    
-        <div class="help">
-            <div class="row">
-                <div class="rowtitle"><span>Getting Started</span></div>
-                <div class="tip"></div>
-                <div class="tip"></div>
-                <div class="tip"></div>
-            </div>
-            <div class="row">
-                <div class="rowtitle"><span>Help</span></div>
-                <div class="tip"></div>
-                <div class="tip"></div>
-                <div class="tip"></div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
+
+i went for dinner!!!!

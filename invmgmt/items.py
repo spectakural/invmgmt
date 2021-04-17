@@ -61,6 +61,7 @@ class date:
 
     def __eq__(self, other):
         if self.date == other.date:
+            
             return True
         else:
             return False
