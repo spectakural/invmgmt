@@ -1,7 +1,4 @@
-@background-color: #24283B;
-@font-color: #ffffff;
-@secondary-color: #505050;
-@hover-background: #24283B;
+@import url("./colors.less");
 
 * {
     padding: 0;
@@ -21,8 +18,8 @@
 }
 
 html {
-    background: @background-color;
-    color: @font-color;
+    background: @body-bg;
+    color: @body-fg;
     height: calc(100% - 60px);
     width: calc(100% - 60px);
     margin-left: 60px;
@@ -38,7 +35,7 @@ html {
     .center();
     position: fixed;
     left: 0;
-    background-color:#1E2132;
+    background-color: @menu-bg;
     height: 100%;
     width: 60px;
 
@@ -59,7 +56,7 @@ html {
             i {
                 transition: 0.7s;
                 font-size: 1.5rem;
-                color: #7179a5;
+                color: @menu-fg;
             }
             &:nth-child(1) {
                 // padding-top:40px;
@@ -70,12 +67,12 @@ html {
             }
             
             &:hover {
-                background: @hover-background;
+                background: @menu-bg-hover;
                 transition: 0.7s;
                 cursor: pointer;
 
                 i {
-                    color: #97A7F9;
+                    color: @menu-fg-hover;
                     transition: 0.7s;
                 }
             }
@@ -87,7 +84,7 @@ html {
     position:fixed;
     top: 0;
     z-index: 10000;
-    background-color: #7e89c9;
+    background-color: @vertmenu-bg;
     width: 100%;
     height: 40px;
     left: 0;
@@ -96,9 +93,6 @@ html {
         flex-direction: column;
         padding-left: 10px;
         height: 20px;
-        span{
-            background-color: #1E2132;
-        }
     }
     
     
@@ -127,8 +121,8 @@ html {
                 width:100%;
                 // margin:10px ;
                 span{
-                    color:#97A7F9;
-                    a{
+                    color: @body-fg-sec;
+                    a {
                         text-decoration: underline;
                         color: inherit;
                     }
@@ -149,7 +143,7 @@ html {
             .tip {
                 height: 80px;
                 width: 70%;
-                background-color: #1E2132;
+                background-color: @body-bg-sec;
                 border-radius: 5px;
             }
 
