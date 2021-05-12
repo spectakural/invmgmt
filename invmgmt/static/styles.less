@@ -1,160 +1,151 @@
 @import url("./colors.less");
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family:'Montserrat';
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
 }
 
 .center {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .full {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 html {
-    background: @body-bg;
-    color: @body-fg;
-    height: calc(100% - 60px);
-    width: calc(100% - 60px);
-    margin-left: 60px;
-    margin-top: 60px;
-    body {
-        .full();
-    }
+  background: @body-bg;
+  color: @body-fg;
+  height: calc(100% - 60px);
+  width: calc(100% - 60px);
+  margin-left: 60px;
+  margin-top: 60px;
+  body {
+    .full();
+  }
 }
-
-
 
 .menu {
+  .center();
+  position: fixed;
+  left: 0;
+  background-color: @menu-bg;
+  height: 100%;
+  width: 60px;
+
+  ul {
     .center();
-    position: fixed;
-    left: 0;
-    background-color: @menu-bg;
-    height: 100%;
-    width: 60px;
+    justify-content: flex-start;
+    flex-direction: column;
+    .full();
 
-    ul {
-        .center();
-        justify-content: flex-start;
-        flex-direction: column;
-        .full();
+    li {
+      transition: 0.7s;
+      list-style-type: none;
+      padding: 30px 0px;
+      width: 100%;
+      .center();
 
-        li {
-            transition: 0.7s;
-            list-style-type: none;
-            padding: 30px 0px;
-            width: 100%;
-            .center();
+      i {
+        transition: 0.7s;
+        font-size: 1.5rem;
+        color: @menu-fg;
+      }
+      &:nth-child(1) {
+        // padding-top:40px;
+        font-size: 1rem;
 
-            
-            i {
-                transition: 0.7s;
-                font-size: 1.5rem;
-                color: @menu-fg;
-            }
-            &:nth-child(1) {
-                // padding-top:40px;
-                font-size:1rem;
-                
-            // margin-top: 70px;
-                    
-            }
-            
-            &:hover {
-                background: @menu-bg-hover;
-                transition: 0.7s;
-                cursor: pointer;
+        // margin-top: 70px;
+      }
 
-                i {
-                    color: @menu-fg-hover;
-                    transition: 0.7s;
-                }
-            }
+      &:hover {
+        background: @menu-bg-hover;
+        transition: 0.7s;
+        cursor: pointer;
+
+        i {
+          color: @menu-fg-hover;
+          transition: 0.7s;
         }
+      }
     }
+  }
 }
 
-.vertmenu{
-    position:fixed;
-    top: 0;
-    z-index: 10000;
-    background-color: @vertmenu-bg;
-    width: 100%;
-    height: 40px;
-    left: 0;
-    .logo{
-        display: flex;
-        flex-direction: column;
-        padding-left: 10px;
-        height: 20px;
-    }
-    
-    
+.vertmenu {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  background-color: @vertmenu-bg;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    height: 20px;
+  }
 }
-
 
 .container {
+  .full();
+  .center();
+  .import {
     .full();
     .center();
-    .import {
-        .full();
-        .center();
-        flex-direction: column;
-        .row{
-            .full();
-            .center();
-            width: 80%;
-            flex-direction: column;
-            justify-content: center;
-            .rowtitle{
-                width: 100%;
-                height: 2rem;
-            }
-            .impbut{
-                height: 20px;
-                width:100%;
-                // margin:10px ;
-                span{
-                    color: @body-fg-sec;
-                    a {
-                        text-decoration: underline;
-                        color: inherit;
-                    }
-                }
-            }
+    flex-direction: column;
+    .row {
+      .full();
+      .center();
+      width: 70%;
+      flex-direction: column;
+      .rowtitle {
+        width: 100%;
+        padding: 0px 50px;
+      }
+      .impbut {
+        height: 80px;
+        width: 100%;
+        // margin:10px ;
+        span {
+          color: @body-fg-sec;
+          flex-direction: column;
+          a {
+            text-decoration: underline;
+            color: inherit;
+          }
         }
+      }
     }
+  }
 
-    .help {
-        .full();
-        .center();
-        flex-direction: column;
-        .row {
-            .center();
-            flex-direction: column;
-            .full();
-            // padding: 50px 0;
-            .tip {
-                height: 80px;
-                width: 70%;
-                background-color: @body-bg-sec;
-                border-radius: 5px;
-            }
+  .help {
+    .full();
+    .center();
+    flex-direction: column;
+    .row {
+      .center();
+      flex-direction: column;
+      // .full();
+      width: 70%;
+      height: 100%;
+      // padding: 50px 0;
+      .tip {
+        height: 80px;
+        width: 100%;
+        background-color: @body-bg-sec;
+        border-radius: 5px;
+      }
 
-            .rowtitle {
-                width: 70%;
-                padding: 0px 50px;
-                
-
-            }
-            
-        }
-        
+      .rowtitle {
+        width: 100%;
+        padding: 0px 50px;
+      }
     }
+  }
 }

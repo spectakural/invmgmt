@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>View</title>
+    <link rel="stylesheet/less" type="text/css" href="../static/styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="../static/view.less"/>
+    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+    <script src="https://kit.fontawesome.com/9663701009.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><i class="fas fa-warehouse"></i></li>
+            <li><i class="fas fa-toolbox"></i></li>
+            <li><i class="fas fa-cog"></i></li>
+            <!-- <li><img src="../static/gears.svg" alt="" width="35px"></li> -->
+            <li><i class="fas fa-question-circle"></i></li>
+        </ul>
+    </div>
+    
+    <div class="vertmenu">
+        <div class="logo">
+            <h1>Invenstorey</h1><span>by MNGE</span>
+        </div>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>slno</th>
+                    <th>dop</th>
+                    <th>firmname</th>
+                    <th>pname</th>
+                    <th>cat</th>
+                    <th>consumption</th>
+                    <th>vvn</th>
+                    <th>qty</th>
+                    <th>unitprice</th>
+                    <th>totalprice</th>
+                    <th>netprice</th>
+                    <th>pgno</th>
+                </tr>  
+            </thead>
+
+            <tbody>
+                <!-- {% for i in values %} -->
+                    <tr>
+                        <!-- {% for j in i.values %}
+                            <td>{{ j }}</td>
+                        {% endfor %} -->
+                        <td>1</td>
+                            <td>2021/04/24</td>
+                            
+                            <td>Apple</td>
+                            
+                            <td>iPhone13</td>
+                            
+                            <td>Mobile</td>
+                            
+                            <td>noncomsumable</td>
+                            
+                            <td>yes</td>
+                            
+                            <td>1</td>
+                            
+                            <td>82000</td>
+                            
+                            <td>82000</td>
+                            
+                            <td>130000</td>
+                            
+                            <td>1</td>
+                    </tr>
+                <!-- {% endfor %} -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

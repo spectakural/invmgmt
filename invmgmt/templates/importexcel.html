@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/9663701009.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -34,12 +35,23 @@
         <div class="importexcel">
            <span>Import your excel file</span>
            <form action="#" method="POST" enctype="multipart/form-data">
-               <label for="excel"> <span>Choose File..</span> </label>
+               <label for="excel"><span id="file-chosen">Choose File..</span> </label>
                <input type="file" name="excel" id="excel" hidden><br>
                <!-- <input type="text"><br> -->
-               <button>Submit</button>
+               <button>Import</button>
            </form>
         </div>    
     </div>
+
+    <script>
+        const actualBtn = document.getElementById('excel');
+
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualBtn.addEventListener('change', function () {
+            fileChosen.textContent = this.files[0].name
+        })
+    </script>
+
 </body>
 </html>
